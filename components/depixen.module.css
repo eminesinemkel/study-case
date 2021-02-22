@@ -1,0 +1,81 @@
+.main {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.textareaClass {
+    resize: none;
+    width: 290px;
+    border: none;
+    padding: 0;
+    margin: 5px;
+}
+
+.inputDesc {
+    min-height: 120px;
+    resize: none;
+    width: 290px;
+    border: none;
+    padding: 0;
+    margin: 5px;
+}
+
+.inputTitle {
+    color: #e2b7a9;
+    font-size: 17px;
+    min-height: 20px;
+    resize: none;
+    width: 290px;
+    border: none;
+    padding: 0;
+    margin: 5px;
+}
+
+.borderSmall {
+    border-color: black;
+    border-style: solid;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 150px;
+    border-width: 1px;
+    border-bottom: none;
+    font-size: 13px;
+    padding: 5px;
+    margin: 0;
+}
+
+.borderBig {
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
+    width: 300px;
+    border-width: 1px;
+    min-height: 500px;
+    margin: 0;
+}
+
+.p {
+    font-size: 13px;
+    padding: 5px;
+    margin: 0;
+}
+
+.inputImg {
+    margin: 5px;
+    width: 290px;
+    height: 250px;
+    background-color: #e2b7a7;
+    align-items: center;
+    text-align: center;
+    display: "none" 
+}
+
+.send {
+    margin-left: 240px;
+}
+
+.fileButton {
+    font-size: 100px;
+}
