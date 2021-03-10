@@ -11,27 +11,43 @@ export default class Depixen extends React.Component {
                     <Form>
                         <TextArea className={styles.inputTitle}
                             value={this.props.title}
-                            onChange={this.props.changeTitle} />
+                            onClick={ (e) => {
+                                if(e.target.value === "New Title"){
+                                    e.target.select();
+                                  }
+                            }}
+                            onChange={this.props.changeTitle}/>
                     </Form>
                     <Form>
                         <TextArea className={styles.inputDesc}
                             value={this.props.desc}
-                            onChange={this.props.changeDesc} />
+                            onClick={ (e) => {
+                                if(e.target.value === "New Description"){
+                                    e.target.select();
+                                  }
+                            }}
+                            onChange={this.props.changeDesc}/>
                     </Form>
                     <Form className={styles.inputImg}>
                         {this.props?.file != null
                             ?
-                            <img src={this.props.file} />
+                            <img src={this.props.file} className={styles.img} />
                             :
-                            (this.props.index === 1 &&
-                                <label>
+                            (this.props.index === 1
+                                ?
+                                (<label>
+                                    <br /> <br />
                                     <text className={styles.fileButton} >+</text>
                                     <br />GÖRSEL
-                                        <input type="file" accept="image/*"
+                                    <input type="file" accept="image/*"
                                         style={{ display: "none" }}
                                         onChange={this.props.changeFile}>
                                     </input>
                                 </label>
+                                )
+                                :
+                                (<div className={styles.outputImg}></div>
+                                )
                             )
                         }
                     </Form>
@@ -39,12 +55,10 @@ export default class Depixen extends React.Component {
                         {this.props.index === 1 &&
                             <Button className={styles.send} onClick={this.props.onButtonClick}
                                 disabled={this.props?.file === null}
-                            >Send</Button>}
+                            ></Button>}
                     </div>
                 </Form>
             </div>
         )
     }
 }
-
-

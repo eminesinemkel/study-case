@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Grid, Header, Icon, Button } from "semantic-ui-react";
+import { Grid, Header, Icon, Button, Placeholder, TextArea, Input } from "semantic-ui-react";
 import Depixen from '../components/depixen';
 import React from 'react';
 
@@ -22,10 +22,22 @@ export default class Home extends React.Component {
       img2: this.state.img1,
       img1: null
     })
-  }
+  };
 
   changeTitle = (e, { value }) => {
     this.setState({ title1: value })
+  };
+
+  select = (e) => {
+    if(e.target.value === "New Title"){
+      e.target.select();
+    }
+  };
+
+  select = (e) => {
+    if(e.target.value === "New Description"){
+      e.target.select();
+    }
   };
 
   changeDesc = (e, { value }) => {

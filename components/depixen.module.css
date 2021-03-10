@@ -2,7 +2,9 @@
     display: block;
     max-width: 100%;
     height: auto;
-    margin: auto;
+    position: relative;
+    left: 50%;
+    margin-left: -150px;
 }
 
 .textareaClass {
@@ -14,37 +16,58 @@
 }
 
 .inputDesc {
-    min-height: 120px;
+    min-height: 165px;
     resize: none;
-    width: 290px;
+    width: 280px;
     border: none;
-    padding: 0;
-    margin: 5px;
+    padding: 0 0 0 5px;
+    margin: 0 0 0 5px;
 }
 
 .inputTitle {
     color: #e2b7a9;
     font-size: 17px;
-    min-height: 20px;
     resize: none;
-    width: 290px;
+    width: 280px;
+    height: 30px;
     border: none;
-    padding: 0;
-    margin: 5px;
+    padding: 0 0 0 5px;
+    margin: 5px 0 0 5px;
 }
 
 .borderSmall {
-    border-color: black;
-    border-style: solid;
-    border-top-left-radius: 10px;
+    display: inline-block;
+    position: relative;
+    padding: 5px 5px 5px 10px;
+    margin-bottom: 0px;
+    min-width: 150px;
+  }
+
+  .borderSmall:after,
+  .borderSmall:before {
+    position: absolute;
+    content: "";
     border-top-right-radius: 10px;
-    width: 150px;
-    border-width: 1px;
+    border-top-left-radius: 10px;
+  }
+  
+  .borderSmall::after{
+    border-left: 1px solid;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: -10px;
+  }
+
+  .borderSmall:before {
+    border-top: 1px solid;
+    border-right: 1px solid;
     border-bottom: none;
-    font-size: 13px;
-    padding: 5px;
-    margin: 0;
-}
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
 
 .borderBig {
     border-color: black;
@@ -58,24 +81,47 @@
 
 .p {
     font-size: 13px;
-    padding: 5px;
-    margin: 0;
 }
 
 .inputImg {
-    margin: 5px;
-    width: 290px;
+    margin: 5px 10px 5px 10px;
+    width: 280px;
     height: 250px;
     background-color: #e2b7a7;
     align-items: center;
     text-align: center;
-    display: "none" 
+    display: "none";
+}
+
+.outputImg {
+    margin: 0;
+    width: 280px;
+    height: 250px;
+    background-color: #cecece;
+}
+
+.send:disabled {
+    margin-left: 270px;
+    width: 20px;
+    height: 25px;
+    border: none;
+    background-color: rgb(218, 218, 218);
 }
 
 .send {
-    margin-left: 240px;
+    margin-left: 270px;
+    width: 20px;
+    height: 25px;
+    border: none;
+    background-color: green;
 }
 
 .fileButton {
     font-size: 100px;
+}
+
+.img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
